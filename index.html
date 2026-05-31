@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Expense Tracker</h1>
+
+        <div class="header-right">
+            <span id="currentDate"></span>
+
+            <button id="themeToggle">
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard">
+
+        <div class="card form-card">
+
+            <h2>Add Expense</h2>
+
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense Name"
+            >
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Amount"
+            >
+
+            <select id="expenseCategory">
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+            </select>
+
+            <button id="addExpenseBtn">
+                Add Expense
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+        <div class="card summary-card">
+
+            <h2>Summary</h2>
+
+            <div id="summaryRoot"></div>
+
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Expense"
+        >
+
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Other</option>
+        </select>
+
+        <button id="clearAllBtn">
+            Clear All
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Expenses</h2>
+
+        <div id="expenseRoot"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script type="text/babel" src="react-components.js"></script>
+
+</body>
+</html>
